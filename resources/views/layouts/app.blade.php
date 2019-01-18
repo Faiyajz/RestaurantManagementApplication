@@ -33,16 +33,34 @@
 <body>
 <div id="app">
     <div class="wrapper ">
+
+        @if(Request::is('admin*'))
         @include('layouts.partial.sidebar')
+        @endif
+
+
+
+
         <div class="main-panel">
             <!-- Navbar -->
-        @include('layouts.partial.topbar')
+
+        @if(Request::is('admin*'))
+            @include('layouts.partial.topbar')
+        @endif
+
         <!-- End Navbar -->
+
             @yield('content')
-            @include('layouts.partial.footer')
+
+            @if(Request::is('admin*'))
+                @include('layouts.partial.footer')
+            @endif
+
         </div>
     </div>
-    @include('layouts.partial.extra')
+    @if(Request::is('admin*'))
+        @include('layouts.partial.extra')
+    @endif
 </div>
 
 <script src="{{asset('backend/js/core/jquery.min.js')}}"></script>

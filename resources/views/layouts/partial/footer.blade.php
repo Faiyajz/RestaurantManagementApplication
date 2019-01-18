@@ -3,22 +3,22 @@
         <nav class="float-left">
             <ul>
                 <li>
-                    <a href="https://www.creative-tim.com">
-                        Creative Tim
+                    <a href="#">
+                        Restaurant Name
                     </a>
                 </li>
                 <li>
-                    <a href="https://creative-tim.com/presentation">
+                    <a href="#">
                         About Us
                     </a>
                 </li>
                 <li>
-                    <a href="http://blog.creative-tim.com">
+                    <a href="#">
                         Blog
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.creative-tim.com/license">
+                    <a href="#">
                         Licenses
                     </a>
                 </li>
@@ -30,7 +30,7 @@
                 document.write(new Date().getFullYear())
             </script>
             , made with <i class="material-icons">favorite</i> by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+            <a href="#" target="_blank">Md. Faiyaj Zaman</a> for a better web.
         </div>
     </div>
 </footer>
