@@ -43,24 +43,17 @@
 
         <div class="main-panel">
             <!-- Navbar -->
-
         @if(Request::is('admin*'))
             @include('layouts.partial.topbar')
         @endif
-
         <!-- End Navbar -->
-
             @yield('content')
 
             @if(Request::is('admin*'))
                 @include('layouts.partial.footer')
             @endif
-
         </div>
     </div>
-    @if(Request::is('admin*'))
-        @include('layouts.partial.extra')
-    @endif
 </div>
 
 <script src="{{asset('backend/js/core/jquery.min.js')}}"></script>
