@@ -3,7 +3,6 @@
 @section('title','Slider')
 
 @push('css')
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
 @endpush
 
 @section('content')
@@ -11,6 +10,17 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
+                    <a href="{{route('slider.create')}}" class="btn btn-info">Add New Slider</a>
+                    @if(session('successMsg'))
+                        <div class="alert alert-success">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <i class="material-icons">close</i>
+                            </button>
+                            <span>
+                                        {{session('successMsg')}}
+                                    </span>
+                        </div>
+                        @endif
                     <div class="card">
                         <div class="card-header card-header-primary">
                             <h4 class="card-title ">All Slider</h4>
