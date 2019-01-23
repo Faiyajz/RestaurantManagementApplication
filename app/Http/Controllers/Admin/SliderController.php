@@ -61,4 +61,52 @@ class SliderController extends Controller
         ]);
 
     }
+
+    public function edit($id){
+
+        $slider = Slider::find($id);
+        return view('admin.slider.edit')->with([
+            'slider'=>$slider,
+        ]);
+    }
+
+    public function update(Request $request,$id){
+        $this->validate($request,[
+            'title'=>'required',
+            'sub_title'=>'required',
+            'image'=>'mimes:jpeg,jpg,bmp,png',
+        ]);
+
+        $image = $request->file('image');
+        $slug = str_slug($request->title);
+        $slider = Slider::find($id);
+        if(isset($image)){
+            $current_date = Carbon::now()->toDateString();
+            $imagename = $slug .'-'.$current_date.'-'.uniqid().'-'.$image->getClientOriginalExtension();
+
+            if(!file_exists('uploads/slider')){
+                mkdir('uploads/slider',0777,true);
+            }
+
+            $image->move('uploads/slider',$imagename);
+        }
+        else{
+            $imagename = $slider->image;
+        }
+
+        $slider->title =$request->title;
+        $slider->sub_title =$request->sub_title;
+        $slider->image =$imagename;
+        $slider->save();
+
+        return redirect()->route('slider.index')->with([
+            'successMsg'=>'Slider Updated Successfully'
+        ]);
+
+
+    }
+
+    public function show($id){
+
+    }
 }

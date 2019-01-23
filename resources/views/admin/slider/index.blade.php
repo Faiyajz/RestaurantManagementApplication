@@ -3,6 +3,8 @@
 @section('title','Slider')
 
 @push('css')
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
 @endpush
 
 @section('content')
@@ -11,30 +13,25 @@
             <div class="row">
                 <div class="col-md-12">
                     <a href="{{route('slider.create')}}" class="btn btn-info">Add New Slider</a>
-                    @if(session('successMsg'))
-                        <div class="alert alert-success">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <i class="material-icons">close</i>
-                            </button>
-                            <span>
-                                        {{session('successMsg')}}
-                                    </span>
-                        </div>
-                        @endif
+                    @include('layouts.partial.msg')
                     <div class="card">
                         <div class="card-header card-header-primary">
                             <h4 class="card-title ">All Slider</h4>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table id="sliderDatatable" class="table table-striped table-bordered" style="width:100%;text-align: center">
+                                <table id="table" class="table table-striped table-bordered"
+                                       style="width:100%;text-align: center">
                                     <thead class=" text-primary">
-                                    <th>SL</th>
-                                    <th>Tilte</th>
-                                    <th>Sub-Title</th>
-                                    <th>Image</th>
-                                    <th>Created At</th>
-                                    <th>Updated At</th>
+                                    <tr>
+                                        <th>SL</th>
+                                        <th>Title</th>
+                                        <th>Sub-Title</th>
+                                        <th>Image</th>
+                                        <th>Created At</th>
+                                        <th>Updated At</th>
+                                        <th>Action</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
                                     @foreach($sliders as $key=>$slider)
@@ -45,8 +42,9 @@
                                             <td>{{$slider->image}}</td>
                                             <td>{{$slider->created_at}}</td>
                                             <td>{{$slider->updated_at}}</td>
+                                            <td><a href="{{route('slider.edit',$slider)}}" class="btn btn-info">Edit</a></td>
                                         </tr>
-                                        @endforeach
+                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -60,12 +58,21 @@
 @endsection
 
 @push('scripts')
-    <script href="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <script href="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#sliderDatatable').DataTable();
-        } );
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript">
+        $('#table').DataTable({
+            'dom': 'Blfrtip',
+            "scrollCollapse": true,
+            fixedHeader: {
+                header: true,
+            },
+            "destroy": true,
+            "bSort": true,
+            "columnDefs": [
+                {targets: "_all"}
+            ]
+        });
     </script>
-
 @endpush
