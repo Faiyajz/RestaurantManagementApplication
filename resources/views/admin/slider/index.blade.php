@@ -20,7 +20,7 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table id="table" class="table table-striped table-bordered"
+                                <table id="table" class="table-striped"
                                        style="width:100%;text-align: center">
                                     <thead class=" text-primary">
                                     <tr>
@@ -42,7 +42,22 @@
                                             <td>{{$slider->image}}</td>
                                             <td>{{$slider->created_at}}</td>
                                             <td>{{$slider->updated_at}}</td>
-                                            <td><a href="{{route('slider.edit',$slider)}}" class="btn btn-info">Edit</a></td>
+                                            <td><a href="{{route('slider.edit',$slider)}}" class="btn btn-info btn-sm"><i class="material-icons">mode_edit</i></a>
+
+                                                <form  id="form-delete-{{$slider->id}}" action="{{route('slider.destroy',$slider->id)}}" style="display: none" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                </form>
+
+                                                <button type="button" class="btn btn-danger btn-sm"
+                                                        onclick="if(confirm('Are you Sure? You want to delete this?')){
+                                                        event.preventDefault();
+                                                        document.getElementById('form-delete-{{$slider->id}}').submit();
+
+                                                    }else{
+                                                    event.preventDefault();
+                                                    }"><i class="material-icons">delete</i></button>
+                                            </td>
                                         </tr>
                                     @endforeach
                                     </tbody>

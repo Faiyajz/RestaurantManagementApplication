@@ -109,4 +109,14 @@ class SliderController extends Controller
     public function show($id){
 
     }
+    public function destroy($id){
+        $slider= Slider::find($id);
+        unlink('uploads/slider/'.$slider->image);
+
+        $slider->delete();
+
+        return redirect()->back()->with([
+            'successMsg'=>'Slider Deleted Successfully'
+        ]);
+    }
 }
