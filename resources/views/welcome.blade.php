@@ -168,21 +168,20 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <ul id="menu-pricing" class="menu-price">
-                        <li class="item dinner">
+                        <li class="item desert">
 
                             <a href="#">
-                                <img src="{{asset('frontend/images/food1.jpg')}}}" class="img-responsive" alt="Food" >
-                                <div class="menu-desc text-center">
+                                <img src="{{asset('frontend/images/food3.jpg')}}" class="img-responsive" alt="Food" >
+                                <div class="menu-desc">
                                             <span>
-                                                <h3>Tomato Curry</h3>
-                                                Natalie &amp; Justin Cleaning by Justin Younger
+                                                <h3>Salad Dish</h3>
+                                                Consectetur adipisicing elit, sed do eiusmod
                                             </span>
                                 </div>
                             </a>
 
-                            <h2 class="white">$20</h2>
+                            <h2 class="white">$18</h2>
                         </li>
-
                         <li class="item breakfast">
 
                             <a href="#">
