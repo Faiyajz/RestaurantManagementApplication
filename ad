@@ -1,0 +1,86 @@
+[33mcommit 9a754083e59853a5f355e13c628caac69a01c883[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Faiyajz <faiyajz007@gmail.com>
+Date:   Thu Jan 24 15:27:19 2019 +0600
+
+    Category Deleted and Caregory added to sidebar menuL
+
+[33mcommit 91ca0a703850f338848ac34ed96f983af694075c[m
+Author: Faiyajz <faiyajz007@gmail.com>
+Date:   Thu Jan 24 12:06:09 2019 +0600
+
+    Slider Show in frontend from database and Frontend logo problem fixed
+
+[33mcommit c7abbb772428110815e8c07f34980a5c68f4956a[m
+Author: Faiyajz <faiyajz007@gmail.com>
+Date:   Thu Jan 24 10:45:28 2019 +0600
+
+    Delete Image From the upload folder
+
+[33mcommit 6130d338e38bf677538fd7358d650543652d7f0c[m
+Author: Faiyajz <faiyajz007@gmail.com>
+Date:   Wed Jan 23 22:36:15 2019 +0600
+
+    Slider Delete
+
+[33mcommit e09067482dc9c9ba5499c48c4eec5fd74cdd8b6e[m
+Author: Faiyajz <faiyajz007@gmail.com>
+Date:   Wed Jan 23 16:44:11 2019 +0600
+
+    Slider Updated
+
+[33mcommit 3d6a6ae8b4d99c195cbba184134c85649fbbbbed[m
+Author: Faiyajz <faiyajz007@gmail.com>
+Date:   Sat Jan 19 23:05:30 2019 +0600
+
+    Slider created with proper validation and image name with slug
+
+[33mcommit abb9cb0e39b533547b3d5f73c4ac2999ad1c2588[m
+Merge: b31f179 7131a0b
+Author: Muhammad Faiyaj <faiyajz007@gmail.com>
+Date:   Sat Jan 19 15:39:07 2019 +0600
+
+    Merge pull request #1 from Faiyajz/SliderIndex
+    
+    Slider Index using Datatable and theme table, sidebar menu selected c…
+
+[33mcommit 7131a0b4a9697f20f3d1f8ee7e46a2e13af975eb[m[33m ([m[1;31morigin/SliderIndex[m[33m, [m[1;32mSliderIndex[m[33m)[m
+Author: Faiyajz <faiyajz007@gmail.com>
+Date:   Sat Jan 19 15:33:08 2019 +0600
+
+    Slider Index using Datatable and theme table, sidebar menu selected condition implemented
+
+[33mcommit b31f1793ce6b58d80be95b93f4ee67f7f520d8fb[m
+Author: Faiyajz <faiyajz007@gmail.com>
+Date:   Sat Jan 19 00:40:05 2019 +0600
+
+    Remove Registration route to stop registration and redirect to dashboard
+
+[33mcommit ccdd7e4586297c8ced625fb8a77283c4442f2e18[m
+Author: Faiyajz <faiyajz007@gmail.com>
+Date:   Sat Jan 19 00:22:48 2019 +0600
+
+    Logout Using Javascript and Auth
+
+[33mcommit ca6f090bc41bb9120ca67baa09cb48f7d9918af9[m
+Author: Faiyajz <faiyajz007@gmail.com>
+Date:   Fri Jan 18 23:34:39 2019 +0600
+
+    Login Page Changed and Auth added
+
+[33mcommit c08be88f303e0e4b1c814249870a43d365197932[m
+Author: Faiyajz <faiyajz007@gmail.com>
+Date:   Fri Jan 18 15:53:54 2019 +0600
+
+    Backend Design Added
+
+[33mcommit f690a213771d12aff39db922d4731c9fea5e60a3[m
+Author: Faiyajz <faiyajz007@gmail.com>
+Date:   Fri Jan 18 14:34:05 2019 +0600
+
+    Front End Design Added
+
+[33mcommit 01b9636c9325528232372a2150aaad3fb0f926dc[m
+Author: Faiyajz <faiyajz007@gmail.com>
+Date:   Fri Jan 18 10:21:44 2019 +0600
+
+    add all files
