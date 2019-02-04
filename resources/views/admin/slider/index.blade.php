@@ -39,7 +39,7 @@
                                             <td>{{$key+1}}</td>
                                             <td>{{$slider->title}}</td>
                                             <td>{{$slider->sub_title}}</td>
-                                            <td>{{$slider->image}}</td>
+                                            <td><img class="img-responsive img-thumbnail" style="height: 100px;width: 100px" src="{{asset('uploads/slider/'.$slider->image)}}"></td>
                                             <td>{{$slider->created_at}}</td>
                                             <td>{{$slider->updated_at}}</td>
                                             <td><a href="{{route('slider.edit',$slider)}}" class="btn btn-info btn-sm"><i class="material-icons">mode_edit</i></a>
