@@ -16,22 +16,24 @@
     <link rel="stylesheet" href="{{asset('frontend/css/flexslider.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/pricing.css')}}">
     <link rel="stylesheet" href="{{asset('frontend/css/main.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/bootstrap-datetimepicker.min.css')}}">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 
     <style>
         @foreach($sliders as $key=>$slider)
-            .owl-carousel .owl-wrapper, .owl-carousel .owl-item:nth-child({{ $key + 1 }}) .item
-            {
-                background: url({{asset('uploads/slider/'.$slider->image)}});
-                background-size: cover;
-                background-position: bottom;
-            }
+            .owl-carousel .owl-wrapper, .owl-carousel .owl-item:nth-child({{ $key + 1 }}) .item {
+            background: url({{asset('uploads/slider/'.$slider->image)}});
+            background-size: cover;
+            background-position: bottom;
+        }
         @endforeach
-    </style>>
+    </style>
+    >
 
     <script src="{{asset('frontend/js/jquery-1.11.2.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('frontend/js/jquery.flexslider.min.js')}}"></script>
     <script type="text/javascript">
-        $(window).load(function() {
+        $(window).load(function () {
             $('.flexslider').flexslider({
                 animation: "slide",
                 controlsContainer: ".flexslider-container"
@@ -53,12 +55,13 @@
 
             var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(24.909439, 91.833800),
-                title:"Mamma's Kitchen Restaurant"
+                title: "Mamma's Kitchen Restaurant"
             });
 
             // To add the marker to the map, call setMap();
             marker.setMap(map);
         }
+
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 
@@ -71,7 +74,8 @@
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#Food-fair-toggle">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#Food-fair-toggle">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -113,10 +117,10 @@
 </section>
 
 
-
 <!--== 6. About us ==-->
 <section id="about" class="about">
-    <img src="{{asset('frontend/images/icons/about_color.png')}}}" class="img-responsive section-icon hidden-sm hidden-xs">
+    <img src="{{asset('frontend/images/icons/about_color.png')}}}"
+         class="img-responsive section-icon hidden-sm hidden-xs">
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row dis-table">
@@ -127,10 +131,14 @@
                     <div class="section-content">
                         <h2 class="section-content-title">About us</h2>
                         <p class="section-content-para">
-                            Astronomy compels the soul to look upward, and leads us from this world to another.  Curious that we spend more time congratulating people who have succeeded than encouraging people who have not. As we got further and further away, it [the Earth] diminished in size.
+                            Astronomy compels the soul to look upward, and leads us from this world to another. Curious
+                            that we spend more time congratulating people who have succeeded than encouraging people who
+                            have not. As we got further and further away, it [the Earth] diminished in size.
                         </p>
                         <p class="section-content-para">
-                            beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.  Where ignorance lurks, so too do the frontiers of discovery and imagination.
+                            beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a
+                            finger it would crumble and fall apart. Seeing this has to change a man. Where ignorance
+                            lurks, so too do the frontiers of discovery and imagination.
                         </p>
                     </div> <!-- /.section-content -->
                 </div>
@@ -155,7 +163,8 @@
                                     <li class="filter" data-filter="all">All</li>
 
                                     @foreach($categories as $category)
-                                        <li class="filter" data-filter="#{{$category->slug}}">{{$category->name}}<span class="badge">{{$category->items->count()}}</span></li>
+                                        <li class="filter" data-filter="#{{$category->slug}}">{{$category->name}}<span
+                                                class="badge">{{$category->items->count()}}</span></li>
                                     @endforeach
                                 </ul><!-- @end #filter-list -->
                             </div>
@@ -173,7 +182,8 @@
                             <li class="item" id="{{$item->category->slug}}">
 
                                 <a href="#">
-                                    <img src="{{asset('uploads/item/'.$item->image)}}" class="img-responsive" alt="Food" style="height: 300px;width: 380px">
+                                    <img src="{{asset('uploads/item/'.$item->image)}}" class="img-responsive" alt="Food"
+                                         style="height: 300px;width: 380px">
                                     <div class="menu-desc">
                                             <span>
                                                 <h3>{{$item->name}}</h3>
@@ -184,7 +194,7 @@
 
                                 <h2 class="white">${{$item->price}}</h2>
                             </li>
-                            @endforeach
+                        @endforeach
                     </ul>
 
                     <!-- <div class="text-center">
@@ -201,7 +211,8 @@
 
 <!--== 8. Great Place to enjoy ==-->
 <section id="great-place-to-enjoy" class="great-place-to-enjoy">
-    <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{asset('frontend/images/icons/beer_black.png')}}">
+    <img class="img-responsive section-icon hidden-sm hidden-xs"
+         src="{{asset('frontend/images/icons/beer_black.png')}}">
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row dis-table">
@@ -217,10 +228,10 @@
 </section> <!-- /#great-place-to-enjoy -->
 
 
-
 <!--==  9. Our Beer  ==-->
 <section id="beer" class="beer">
-    <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{asset('frontend/images/icons/beer_color.png')}}">
+    <img class="img-responsive section-icon hidden-sm hidden-xs"
+         src="{{asset('frontend/images/icons/beer_color.png')}}">
     <div class="container-fluid">
         <div class="row dis-table">
             <div class="hidden-xs col-sm-6 dis-table-cell section-bg">
@@ -232,10 +243,17 @@
                     <h2 class="section-content-title">Our Beer</h2>
                     <div class="section-description">
                         <p class="section-content-para">
-                            Astronomy compels the soul to look upward, and leads us from this world to another.  Curious that we spend more time congratulating people who have succeeded than encouraging people who have not. As we got further and further away, it [the Earth] diminished in size.
+                            Astronomy compels the soul to look upward, and leads us from this world to another. Curious
+                            that we spend more time congratulating people who have succeeded than encouraging people who
+                            have not. As we got further and further away, it [the Earth] diminished in size.
                         </p>
                         <p class="section-content-para">
-                            beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.  Where ignorance lurks, so too do the frontiers of discovery and imagination.Astronomy compels the soul to look upward, and leads us from this world to another.  Curious that we spend more time congratulating people who have succeeded than encouraging people who have not. As we got further and further away, it [the Earth] diminished in size.
+                            beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a
+                            finger it would crumble and fall apart. Seeing this has to change a man. Where ignorance
+                            lurks, so too do the frontiers of discovery and imagination.Astronomy compels the soul to
+                            look upward, and leads us from this world to another. Curious that we spend more time
+                            congratulating people who have succeeded than encouraging people who have not. As we got
+                            further and further away, it [the Earth] diminished in size.
                         </p>
                     </div>
                 </div>
@@ -245,10 +263,10 @@
 </section>
 
 
-
 <!--== 10. Our Breakfast Menu ==-->
 <section id="breakfast" class="breakfast">
-    <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{asset('frontend/images/icons/bread_black.png')}}">
+    <img class="img-responsive section-icon hidden-sm hidden-xs"
+         src="{{asset('frontend/images/icons/bread_black.png')}}">
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row dis-table">
@@ -264,10 +282,10 @@
 </section> <!-- /#breakfast -->
 
 
-
 <!--== 11. Our Bread ==-->
 <section id="bread" class="bread">
-    <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{asset('frontend/images/icons/bread_color.png')}}">
+    <img class="img-responsive section-icon hidden-sm hidden-xs"
+         src="{{asset('frontend/images/icons/bread_color.png')}}">
     <div class="container-fluid">
         <div class="row dis-table">
             <div class="hidden-xs col-sm-6 dis-table-cell section-bg">
@@ -280,10 +298,14 @@
                     </h2>
                     <div class="section-description">
                         <p class="section-content-para">
-                            Astronomy compels the soul to look upward, and leads us from this world to another.  Curious that we spend more time congratulating people who have succeeded than encouraging people who have not. As we got further and further away, it [the Earth] diminished in size.
+                            Astronomy compels the soul to look upward, and leads us from this world to another. Curious
+                            that we spend more time congratulating people who have succeeded than encouraging people who
+                            have not. As we got further and further away, it [the Earth] diminished in size.
                         </p>
                         <p class="section-content-para">
-                            beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.  Where ignorance lurks, so too do the frontiers of discovery and imagination.
+                            beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a
+                            finger it would crumble and fall apart. Seeing this has to change a man. Where ignorance
+                            lurks, so too do the frontiers of discovery and imagination.
                         </p>
                     </div>
                 </div>
@@ -293,11 +315,10 @@
 </section>
 
 
-
-
 <!--== 12. Our Featured Dishes Menu ==-->
 <section id="featured-dish" class="featured-dish">
-    <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{asset('frontend/images/icons/food_black.png')}}">
+    <img class="img-responsive section-icon hidden-sm hidden-xs"
+         src="{{asset('frontend/images/icons/food_black.png')}}">
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row dis-table">
@@ -311,8 +332,6 @@
         </div> <!-- /.row -->
     </div> <!-- /.wrapper -->
 </section> <!-- /#featured-dish -->
-
-
 
 
 <!--== 13. Menu List ==-->
@@ -560,7 +579,8 @@
 
                 <div id="moreMenuContent"></div>
                 <div class="text-center">
-                    <a id="loadMenuContent" class="btn btn-middle hidden-sm hidden-xs">Load More <span class="caret"></span></a>
+                    <a id="loadMenuContent" class="btn btn-middle hidden-sm hidden-xs">Load More <span
+                            class="caret"></span></a>
                 </div>
             </div>
         </div>
@@ -568,11 +588,11 @@
 </section>
 
 
-
 <!--== 14. Have a look to our dishes ==-->
 
 <section id="have-a-look" class="have-a-look hidden-xs">
-    <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{asset('frontend/images/icons/food_color.png')}}">
+    <img class="img-responsive section-icon hidden-sm hidden-xs"
+         src="{{asset('frontend/images/icons/food_color.png')}}">
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
@@ -582,37 +602,37 @@
                         <div class="flexslider">
                             <ul class="slides">
                                 <li>
-                                    <img src="{{asset('frontend/images/menu-gallery/menu1.png')}}" />
+                                    <img src="{{asset('frontend/images/menu-gallery/menu1.png')}}"/>
                                 </li>
                                 <li>
-                                    <img src="{{asset('frontend/images/menu-gallery/menu2.jpg')}}" />
+                                    <img src="{{asset('frontend/images/menu-gallery/menu2.jpg')}}"/>
                                 </li>
                                 <li>
-                                    <img src="{{asset('frontend/images/menu-gallery/menu3.png')}}" />
+                                    <img src="{{asset('frontend/images/menu-gallery/menu3.png')}}"/>
                                 </li>
                                 <li>
-                                    <img src="{{asset('frontend/images/menu-gallery/menu4.jpg')}}" />
+                                    <img src="{{asset('frontend/images/menu-gallery/menu4.jpg')}}"/>
                                 </li>
                                 <li>
-                                    <img src="{{asset('frontend/images/menu-gallery/menu5.jpg')}}" />
+                                    <img src="{{asset('frontend/images/menu-gallery/menu5.jpg')}}"/>
                                 </li>
                                 <li>
-                                    <img src="{{asset('frontend/images/menu-gallery/menu6.jpg')}}" />
+                                    <img src="{{asset('frontend/images/menu-gallery/menu6.jpg')}}"/>
                                 </li>
                                 <li>
-                                    <img src="{{asset('frontend/images/menu-gallery/menu7.jpg')}}" />
+                                    <img src="{{asset('frontend/images/menu-gallery/menu7.jpg')}}"/>
                                 </li>
                                 <li>
-                                    <img src="{{asset('frontend/images/menu-gallery/menu8.jpg')}}" />
+                                    <img src="{{asset('frontend/images/menu-gallery/menu8.jpg')}}"/>
                                 </li>
                                 <li>
-                                    <img src="{{asset('frontend/images/menu-gallery/menu9.jpg')}}" />
+                                    <img src="{{asset('frontend/images/menu-gallery/menu9.jpg')}}"/>
                                 </li>
                                 <li>
-                                    <img src="{{asset('frontend/images/menu-gallery/menu10.jpg')}}" />
+                                    <img src="{{asset('frontend/images/menu-gallery/menu10.jpg')}}"/>
                                 </li>
                                 <li>
-                                    <img src="{{asset('frontend/images/menu-gallery/menu11.jpg')}}" />
+                                    <img src="{{asset('frontend/images/menu-gallery/menu11.jpg')}}"/>
                                 </li>
                             </ul>
                         </div>
@@ -630,11 +650,10 @@
 </section>
 
 
-
-
 <!--== 15. Reserve A Table! ==-->
 <section id="reserve" class="reserve">
-    <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{asset('frontend/images/icons/reserve_black.png')}}">
+    <img class="img-responsive section-icon hidden-sm hidden-xs"
+         src="{{asset('frontend/images/icons/reserve_black.png')}}">
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row dis-table">
@@ -650,36 +669,44 @@
 </section> <!-- /#reserve -->
 
 
-
 <section class="reservation">
-    <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{asset('frontend/images/icons/reserve_color.png')}}">
+    <img class="img-responsive section-icon hidden-sm hidden-xs"
+         src="{{asset('frontend/images/icons/reserve_color.png')}}">
     <div class="wrapper">
         <div class="container-fluid">
             <div class=" section-content">
                 <div class="row">
                     <div class="col-md-5 col-sm-6">
-                        <form class="reservation-form" method="post" action="reserve.php">
+                        <form class="reservation-form" method="post" action="{{route('reservation.reserve')}}">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-6 col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control reserve-form empty iconified" name="name" id="name" required="required" placeholder="  &#xf007;  Name">
+                                        <input type="text" class="form-control reserve-form empty iconified" name="name"
+                                               id="name" placeholder="  &#xf007;  Name">
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" name="email" class="form-control reserve-form empty iconified" id="email" required="required" placeholder="  &#xf1d8;  e-mail">
+                                        <input type="email" name="email"
+                                               class="form-control reserve-form empty iconified" id="email"
+                                               placeholder="  &#xf1d8;  e-mail">
                                     </div>
                                 </div>
 
                                 <div class="col-md-6 col-sm-6">
                                     <div class="form-group">
-                                        <input type="tel" class="form-control reserve-form empty iconified" name="phone" id="phone" required="required" placeholder="  &#xf095;  Phone">
+                                        <input type="tel" class="form-control reserve-form empty iconified" name="phone"
+                                               id="phone" placeholder="  &#xf095;  Phone">
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control reserve-form empty iconified" name="datepicker" id="datepicker" required="required" placeholder="&#xf017;  Time">
+                                        <input type="text" class="form-control reserve-form empty iconified"
+                                               name="date_and_time" id="datetimepicker1" placeholder="&#xf017;  Time">
                                     </div>
                                 </div>
 
                                 <div class="col-md-12 col-sm-12">
-                                    <textarea type="text" name="message" class="form-control reserve-form empty iconified" id="message" rows="3" required="required" placeholder="  &#xf086;  We're listening"></textarea>
+                                    <textarea type="text" name="message"
+                                              class="form-control reserve-form empty iconified" id="message" rows="3"
+                                              placeholder="  &#xf086;  We're listening"></textarea>
                                 </div>
 
                                 <div class="col-md-12 col-sm-12">
@@ -721,8 +748,6 @@
 </section>
 
 
-
-
 <section id="contact" class="contact">
     <div class="container-fluid color-bg">
         <div class="row dis-table">
@@ -759,7 +784,6 @@
 </div>
 
 
-
 <section class="contact-form">
     <div class="container">
         <div class="row">
@@ -769,23 +793,27 @@
 
                         <div class="col-md-6 col-sm-6">
                             <div class="form-group">
-                                <input  name="name" type="text" class="form-control" id="name" required="required" placeholder="  Name">
+                                <input name="name" type="text" class="form-control" id="name" required="required"
+                                       placeholder="  Name">
                             </div>
                             <div class="form-group">
-                                <input name="email" type="email" class="form-control" id="email" required="required" placeholder="  Email">
+                                <input name="email" type="email" class="form-control" id="email" required="required"
+                                       placeholder="  Email">
                             </div>
                             <div class="form-group">
-                                <input name="subject" type="text" class="form-control" id="subject" required="required" placeholder="  Subject">
+                                <input name="subject" type="text" class="form-control" id="subject" required="required"
+                                       placeholder="  Subject">
                             </div>
                         </div>
 
                         <div class="col-md-6 col-sm-6">
-                            <textarea name="message" type="text" class="form-control" id="message" rows="7" required="required" placeholder="  Message"></textarea>
+                            <textarea name="message" type="text" class="form-control" id="message" rows="7"
+                                      required="required" placeholder="  Message"></textarea>
                         </div>
 
                         <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
                             <div class="text-center">
-                                <button type="submit" id="submit" name="submit" class="btn btn-send">Send </button>
+                                <button type="submit" id="submit" name="submit" class="btn btn-send">Send</button>
                             </div>
                         </div>
                     </form>
@@ -813,13 +841,35 @@
 
 <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
 <script src="{{asset('frontend/js/owl.carousel.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('frontend/js/jquery.mixitup.min.js')}}" ></script>
+<script type="text/javascript" src="{{asset('frontend/js/jquery.mixitup.min.js')}}"></script>
 <script src="{{asset('frontend/js/wow.min.js')}}"></script>
 <script src="{{asset('frontend/js/jquery.validate.js')}}"></script>
 <script type="text/javascript" src="{{asset('frontend/js/jquery.hoverdir.js')}}"></script>
 <script type="text/javascript" src="{{asset('frontend/js/jQuery.scrollSpeed.js')}}"></script>
 <script src="{{asset('frontend/js/script.js')}}"></script>
 
+<script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+
+{!! Toastr::message() !!}
+
+@if ($errors->any())
+    @foreach ($errors->all() as $error)
+        <script>
+            toastr.error('{{$error}}');
+        </script>
+    @endforeach
+@endif
+
+<script src="{{asset('frontend/js/bootstrap-datetimepicker.min.js')}}"></script>
+<script>
+    $('#datetimepicker1').datetimepicker({
+        format: "dd MM yyyy - HH:11 P",
+        showMeridian: true,
+        autoClose: true,
+        todayBtn: true
+
+    });
+</script>
 
 </body>
 </html>

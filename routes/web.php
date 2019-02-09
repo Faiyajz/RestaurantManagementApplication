@@ -16,6 +16,7 @@
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('welcome');
+Route::post('/reservation', 'ReservationController@reserve')->name('reservation.reserve');
 
 
 Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'Admin'],function (){
