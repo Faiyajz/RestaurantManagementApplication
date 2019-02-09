@@ -119,7 +119,7 @@
 
 <!--== 6. About us ==-->
 <section id="about" class="about">
-    <img src="{{asset('frontend/images/icons/about_color.png')}}}"
+    <img src="{{asset('frontend/images/icons/about_color.png')}}"
          class="img-responsive section-icon hidden-sm hidden-xs">
     <div class="wrapper">
         <div class="container-fluid">
@@ -216,7 +216,7 @@
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row dis-table">
-                <div class="col-xs-6 col-sm-6 dis-table-cell color-bg">
+                <div class="col-xs-6 col-sm-6 dis-table-cell color-bg" style="width: 643.5px">
                     <h2 class="section-title">Great Place to enjoy</h2>
                 </div>
                 <div class="col-xs-6 col-sm-6 dis-table-cell section-bg">
@@ -264,13 +264,13 @@
 
 
 <!--== 10. Our Breakfast Menu ==-->
-<section id="breakfast" class="breakfast">
+<section id="breakfast" class="breakfast" style="width: 100%">
     <img class="img-responsive section-icon hidden-sm hidden-xs"
          src="{{asset('frontend/images/icons/bread_black.png')}}">
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row dis-table">
-                <div class="col-xs-6 col-sm-6 dis-table-cell color-bg">
+                <div class="col-xs-6 col-sm-6 dis-table-cell color-bg" style="width: 643.5px">
                     <h2 class="section-title">Our Breakfast Menu</h2>
                 </div>
                 <div class="col-xs-6 col-sm-6 dis-table-cell section-bg">
@@ -597,7 +597,7 @@
         <div class="container-fluid">
             <div class="row">
 
-                <div class="menu-gallery" style="width: 50%; float:left;">
+                <div class="menu-gallery" style="width:643px; float:left;height: 389px">
                     <div class="flexslider-container">
                         <div class="flexslider">
                             <ul class="slides">
@@ -639,7 +639,7 @@
                     </div>
                 </div>
 
-                <div class="gallery-heading hidden-xs color-bg" style="width: 50%; float:right;">
+                <div class="gallery-heading hidden-xs color-bg" style="width: 50%;height: 689px; ;float:right;">
                     <h2 class="section-title">Have A Look To Our Dishes</h2>
                 </div>
 
@@ -649,6 +649,9 @@
     </div> <!-- /.wrapper -->
 </section>
 
+<section>
+    <h2 style="text-align: center;color: rgb(139, 195, 74);">You Are Welcome !</h2>
+</section>
 
 <!--== 15. Reserve A Table! ==-->
 <section id="reserve" class="reserve">
@@ -657,7 +660,7 @@
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row dis-table">
-                <div class="col-xs-6 col-sm-6 dis-table-cell color-bg">
+                <div class="col-xs-6 col-sm-6 dis-table-cell color-bg" style="width: 643.5px">
                     <h2 class="section-title">Reserve A Table !</h2>
                 </div>
                 <div class="col-xs-6 col-sm-6 dis-table-cell section-bg">
