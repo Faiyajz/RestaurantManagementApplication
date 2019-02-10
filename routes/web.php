@@ -22,7 +22,11 @@ Route::post('/reservation', 'ReservationController@reserve')->name('reservation.
 Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'Admin'],function (){
 
     Route::get('dashboard','DashboardController@index')->name('admin.dashboard');
+
     Route::get('reservation','ReservationController@index')->name('reservation.index');
+    Route::post('reservation/{id}','ReservationController@status')->name('reservation.status');
+    Route::delete('reservation/{id}','ReservationController@destroy')->name('reservation.destroy');
+
     Route::resource('slider','SliderController');
     Route::resource('category','CategoryController');
     Route::resource('item','ItemController');

@@ -53,9 +53,25 @@
                                             </td>
                                             <td>{{$reservation->created_at}}</td>
                                             <td>{{$reservation->updated_at}}</td>
-                                            <td><a href="#" class="btn btn-info btn-sm"><i class="material-icons">mode_edit</i></a>
+                                            <td>
 
-                                                <form  id="form-delete-{{$reservation->id}}" action="#" style="display: none" method="POST">
+                                                @if($reservation->status==false)
+                                                    <form  id="form-status-{{$reservation->id}}" action="{{route('reservation.status',$reservation->id)}}" style="display: none" method="POST">
+                                                        @csrf
+                                                    </form>
+
+                                                    <button type="button" class="btn btn-info btn-sm"
+                                                            onclick="if(confirm('Did you verify this by phone?')){
+                                                                event.preventDefault();
+                                                                document.getElementById('form-status-{{$reservation->id}}').submit();
+
+                                                                }else{
+                                                                event.preventDefault();
+                                                                }"><i class="material-icons">done</i></button>
+                                                @endif
+
+
+                                                <form  id="form-delete-{{$reservation->id}}" action="{{route('reservation.destroy',$reservation->id)}}" style="display: none" method="POST">
                                                     @csrf
                                                     @method('DELETE')
                                                 </form>
