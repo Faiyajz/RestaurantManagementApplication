@@ -17,6 +17,7 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('welcome');
 Route::post('/reservation', 'ReservationController@reserve')->name('reservation.reserve');
+Route::post('/contact', 'ContactController@sendMessage')->name('contact.send');
 
 
 Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'Admin'],function (){
