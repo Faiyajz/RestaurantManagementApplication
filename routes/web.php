@@ -31,6 +31,8 @@ Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'Admin'],funct
     Route::resource('slider','SliderController');
     Route::resource('category','CategoryController');
     Route::resource('item','ItemController');
+
+    Route::get('contact','ContactController@index')->name('contact.index');
 });
 
 
