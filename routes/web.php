@@ -33,6 +33,8 @@ Route::group(['prefix'=>'admin','middleware'=>'auth','namespace'=>'Admin'],funct
     Route::resource('item','ItemController');
 
     Route::get('contact','ContactController@index')->name('contact.index');
+    Route::get('contact/{id}','ContactController@show')->name('contact.show');
+    Route::delete('contact/{id}','ContactController@destroy')->name('contact.destroy');
 });
 
 
